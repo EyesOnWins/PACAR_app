@@ -1,0 +1,24 @@
+﻿<html>
+ <head>
+    <title>PACAR: Patient Care App login page</title>
+ </head>
+ <style>
+    body {
+      background-color: lightblue;
+      font-weight: bold;
+      float:center;
+    }
+    </style>
+ <body>
+     <center>
+     <div class="container">
+         <h1>PACAR: Patient Care App</h1>
+         <br>
+         <p>Click <a href="/">here</a> to sign in</p>
+         {% for message in get_flashed_messages() %}
+             {{ message }}
+         {% endfor %}
+     </div>
+    </center>  
+ </body>
+</html>

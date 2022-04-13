@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+    <title>PACAR: Patient Care App login page</title>
+</head>
+<style>
+  body {
+    background-color: lightblue;
+    font-weight: bold;
+    float:center;
+    margin-top: 300px;
+  }
+  </style>
+<body>
+  <center>
+    <div class="container">
+        <h1>Please Login</h1>
+        <br>
+        <form action="" method="post">
+            <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+          <br>
+          <br>
+            <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+          <br>
+          <br>
+            <input class="btn btn-default" type="submit" value="Login">
+        </form>
+        {% if error %}
+        <p class="error">
+            <strong>Error:</strong> {{ error }}
+        {% endif %}
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}      
+</div>
+</center>
+  </body>
+</html>
